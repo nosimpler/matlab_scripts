@@ -1,0 +1,7 @@
+U = TVRD(X_a)
+Upre = U(:,1:600)
+Upost = U(:,601:750)
+plot_detection_post(Upre, Upost, y, linspace(1, 1.25, 150))
+[plow, phigh] = exchange_beta_sort(Upre, Upost, y, linspace(1, 1.25, 150))
+figure; plot(t, plow(:,6))
+hold on; plot(t, phigh(:,6))
